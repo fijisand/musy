@@ -21,19 +21,19 @@ A free music bot for Yapin' (yapin.gg). Plays YouTube links or song names in voi
 3. Give the bot's role **Connect** and **Speak** on your voice channels. Without Speak it joins muted.
 
 ### 2. Host it free on bot-hosting.net
-1. Log in at bot-hosting.net with Discord, claim your free coins, and create a **Python** server. (Servers cost coins to keep running, so check your panel now and then.)
+1. Log in at bot-hosting.net with Discord, create your free bot, and create a **Python** server. (Free servers die every 4 days, and are free to renew manually.)
 2. **Files** tab → upload `main.py` and `requirements.txt`.
-3. Token: either upload a `.env` file (copy `.env.example`, fill in your token) or add `YAPIN_BOT_TOKEN` as an environment variable if your panel has that.
+3. Token: either upload a `.env` file (copy `.env.example`, fill in your token, remove `.example` from the end of the name) or add `YAPIN_BOT_TOKEN` as an environment variable if your panel has that.
 4. **Startup** tab → main file = `main.py`, requirements file = `requirements.txt` (or paste the package names into *Additional Python packages*).
 5. Start the server and watch the console for `Musy is warming up...`.
 
 ### 3. Try it
-Join a voice channel, then type `/play lofi hip hop` or paste a YouTube link.
+Join a voice channel, then type `/play lofi hip-hop` or paste a YouTube link.
 
 ## Good to know
 
-- **No screen share / video.** Yapin's developer docs say bots send one audio track only and can't share video, so Musy is audio only.
-- **YouTube risk.** The open-source `yapin-voice-bot` README quotes Yapin's voice docs saying streaming from YouTube breaks their terms and bots playing audio they lack rights to can be turned off. YouTube's own terms also forbid it, and hosts can remove bots for it. Use at your own risk, ideally on a small private server.
+- **No screen share / video.** Yapin's developer docs say bots send one audio track only and can't share video, so Musy is audio only (sigh).
+- **YouTube risk.** The open-source `yapin-voice-bot` README quotes Yapin's voice docs saying streaming from YouTube breaks their terms and bots playing audio they lack rights to can be turned off. YouTube's own terms also forbid it, and hosts can remove bots for it. Use at your own risk, ideally on a small private server (like bot-hosting.net or your own machine).
 - **YouTube may block the host.** Free hosts use datacenter IPs, which YouTube sometimes blocks ("Sign in to confirm you're not a bot"). Fix: export your YouTube cookies as `cookies.txt` (Netscape format, e.g. with the "Get cookies.txt LOCALLY" browser extension) and put it next to `main.py`. Use a throwaway Google account, since YouTube can flag accounts used this way.
 - **yt-dlp breaks sometimes.** Musy updates it on every start. If search suddenly fails, restart the server.
 - **Limits.** One voice channel per server, 10 voice joins/leaves per minute (Musy stays under it), songs up to 4 hours (`MUSY_MAX_MINUTES`), 50 songs in the queue.
