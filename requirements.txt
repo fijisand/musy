@@ -1,0 +1,5 @@
+yapin[voice]
+livekit
+cryptography
+yt-dlp
+imageio-ffmpeg
