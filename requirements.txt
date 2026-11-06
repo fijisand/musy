@@ -1,4 +1,4 @@
-yapin[voice]
+yapin
 livekit
 cryptography
 yt-dlp
